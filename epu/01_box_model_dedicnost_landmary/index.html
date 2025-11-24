@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/normaliize.css">
+    <title>01: Box Model, Dedičnosť, Zabaľovanie</title>
+
+</head>
+
+<body>
+    <!-- 
+    ===============================================
+    DEDIČNOSŤ CSS (CSS Inheritance)
+    ===============================================
+    Tu budeme ukazovať, ako vlastnosti nastavené na body element
+    sa automaticky prenášajú (dedia) na všetky vnorené elementy.
+    
+    Napríklad: Ak nastavíme farbu textu na body, všetky h1, p, div
+    budú mať tú istú farbu (ak im ju neprepisujeme).
+    -->
+
+    <h1>Opakovanie: Box Model, Dedičnosť a Zabaľovanie</h1>
+    <p>Tento dokument demonštruje základné CSS koncepty</p>
+
+    <!-- 
+    ===============================================
+    BOX MODEL - Časť 1
+    ===============================================
+    BOX MODEL znamená, že každý HTML element je obdĺžnik zložený z:
+    1. CONTENT - samotný obsah (text, obrázok)
+    2. PADDING - vnútorný priestor okolo obsahu
+    3. BORDER - rámček okolo paddingu
+    4. MARGIN - vonkajší priestor mimo border
+    
+    Nasledujúce tri boxy budú mať rôzne veľkosti padding, border a margin.
+    Vytvoríme si vlastné triedy a naštýlujeme ich.
+    -->
+
+    <h2>1. BOX MODEL - Ukážka</h2>
+    
+    <!-- Tento box bude mať symetrický vnútorný aj vonkajší okraj,a orámovanie -->
+    <div>
+        <p>Box s vnútorným okrajom 20px, orámovaním 5px, vonkajším okrajom 30px</p>
+    </div>
+
+    <!-- Tento box bude mať väčší vnútorným odsadením a bodkovaný rámom -->
+    <div>
+        <p>Box s vnútorným odsadením 40px, orámovanie 3px dotted, vonkajším okrajom 20px</p>
+    </div>
+
+    <!-- Tento box bude mať rôzny vnútorným odsadením a vonkajším okrajom na každej strane -->
+    <div>
+        <p>Box s asymetrickým vnútorným odsadenímom a vonkajším okrajomom</p>
+    </div>
+
+    <!-- 
+    ===============================================
+    ZABAĽOVANIE OBJEKTOV - Časť 2
+    ===============================================
+    HTML elementy sa delia na:
+    
+    INLINE elementy (span, a, strong, em):
+    - Idú za sebou na jednom riadku
+    - Keď nie je dosť miesta, ZABALIA sa na ďalší riadok
+    - Príklad: slová v odstavci
+    
+    BLOKOVÉ elementy (div, p, h1):
+    - Každý začína na NOVOM riadku
+    - Zaberajú celú šírku
+    - Príklad: odstavce pod sebou
+    
+    Teraz si to ukážeme na príkladoch.
+    -->
+
+    <h2>2. ZABAĽOVANIE OBJEKTOV</h2>
+    
+    <h3>Inline elementy (zabaľujú sa):</h3>
+    
+    <!-- 
+    Tento kontajner obmedzíme na šírku, aby sme videli zabaľovanie.
+    Tieto divy zmeníme na inline elementy (napr. span alebo display: inline-block)
+    a naštýlujeme ich ako farebné boxy.
+    -->
+    <div>
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+        <div>Box 5</div>
+        <div>Box 6</div>
+        <div>Box 7</div>
+        <div>Box 8</div>
+        <div>Box 9</div>
+        <div>Box 10</div>
+    </div>
+
+    <h3>Blokové elementy (každý na novom riadku):</h3>
+    
+    <!-- Tieto divy ostanú blokové - každý na novom riadku -->
+    <div>Blokový element 1</div>
+    <div>Blokový element 2</div>
+    <div>Blokový element 3</div>
+
+    <!-- 
+    ===============================================
+    DEDIČNOSŤ - Časť 3
+    ===============================================
+    DEDIČNOSŤ znamená, že vnorené elementy preberajú (dedia) vlastnosti
+    od svojich rodičov.
+    
+    VLASTNOSTI, KTORÉ SA DEDIA:
+    - color (farba textu)
+    - font-family (typ písma)
+    - font-size (veľkosť písma)
+    - line-height (výška riadku)
+    - text-align
+    
+    VLASTNOSTI, KTORÉ SA NEDEDIA:
+    - padding, margin, border
+    - background-color
+    - width, height
+    
+    Tento rodičovský box dostane farbu a veľkosť písma.
+    Všetky vnorené elementy (odstavce, divy) to zdedia.
+    -->
+
+    <h2>3. DEDIČNOSŤ CSS</h2>
+    
+    <!-- Tento div bude mať nastavenú farbu a veľkosť písma -->
+    <div>
+        <p>Rodičovský element má nastavenú farbu a veľkosť písma.</p>
+        <p>Tento odstavec dedí vlastnosti od rodiča.</p>
+        <p>Aj tento dedí farbu a font-size, ale tento span má vlastnú farbu.</p>
+        
+        <!-- Tento vnorený div tiež dedí od rodiča -->
+        <div>
+            <p>Vnorený div - dedí od rodičovského boxu</p>
+        </div>
+    </div>
+
+    <!-- 
+    ===============================================
+    PRAKTICKÝ PRÍKLAD - Časť 4
+    ===============================================
+    Tu spojíme všetky naučené koncepty:
+    
+    1. BOX MODEL - karta bude mať padding, border, margin
+    2. DEDIČNOSŤ - farba textu sa zdedí na h3 a p
+    3. INLINE/BLOCK - tlačidlo je inline element, upravíme ho
+    
+    Vytvoríme karty produktov s profesionálnym vzhľadom.
+    Môžeme použit aj sémantický element <article> namiesto <div>.
+    -->
+
+    <h2>4. Praktický príklad</h2>
+    
+    <!-- Karta produktu - naštýlujeme ju ako box s obsahom -->
+    <div>
+        <h3>Produkt 1</h3>
+        <p>Toto je karta produktu s padding, border a margin. Text dedí farbu od karty.</p>
+        <a href="#">Kúpiť teraz</a>
+    </div>
+
+    <!-- Druhá karta s rovnakými štýlmi -->
+    <div>
+        <h3>Produkt 2</h3>
+        <p>Rovnaké štýly ako prvá karta. Všimnite si konzistentné odsadenia.</p>
+        <a href="#">Kúpiť teraz</a>
+    </div>
+
+    <p>&copy; 2025 | Všetky práva vyhradené</p>
+
+</body>
+</html>

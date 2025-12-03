@@ -1,0 +1,6 @@
+:root{
+    --farba-pozadia: brown;
+}
+body{
+    background-color: var(--farba-pozadiapozadia);
+}

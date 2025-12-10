@@ -1,6 +1,49 @@
 :root{
-    --farba-pozadia: brown;
+    --farba-pozadia:#ecf0f1;
+    --primarna-farba:#3498db;
+    --sekundarna-farba:#2ecc71;
+    --farba-textu:#2c3e50;
 }
+ 
 body{
-    background-color: var(--farba-pozadiapozadia);
+    background-color: var(--farba-pozadia);
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+ 
+ 
+header{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+}
+ 
+h1{
+    color: white;
+    font-size: 36px;
+}
+ 
+section{
+    background-color: rgb(255, 255, 255);
+}
+ 
+.header__podnadlis{
+    color: #2c3e50;
+}
+
+.temy{
+
+}
+
+ h2{
+    color: var(--farba-textu);
+    border-bottom: 5px; 
+    padding: 10px;
+
+ }

@@ -29,3 +29,28 @@ nav     { background: #f6be00; }
 article { background: #e64134; }
 aside   { background: #eb70b1; }
 footer  { background:#0f1a5f;}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: lem;
+}
+
+article{
+    order: 2;
+    flex: 2;
+}
+
+nav{
+    order: 3;
+    flex: 3;
+    gap: 10px;
+}
+
+

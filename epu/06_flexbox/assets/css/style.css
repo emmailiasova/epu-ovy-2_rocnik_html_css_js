@@ -9,8 +9,11 @@ main{
     height: 100%;
     margin: 0;
     border: 2px orange solid;  
-    display: flex; 
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
 }
 
 p{
@@ -22,19 +25,15 @@ p{
 /* Farby elementov */
 .prvy{
     background-color: plum;
-    order: 2;
-    align-self: flex-end;
 }
 
 .druhy{
     background-color: burlywood;
-    order: 3;
 
 }
 
 .treti{
     background-color: cyan;
-    order: 1;
 
 }
 

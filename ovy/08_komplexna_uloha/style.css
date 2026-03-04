@@ -1,0 +1,162 @@
+/* ===========================================
+   MINI CVIČENIE - MEDIA QUERIES
+   Vytvorte responzívnu stránku
+   =========================================== */
+
+/* TODO: Importujte Google Fonts - Montserrat a Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* TODO: CSS Premenné - farby, spacing, fonty */
+:root {
+  /* Farby */
+  --primarna: #2563eb;
+  --primarna-tmava: #1e40af;
+  --akcent: #f97316;
+  --text-tmavy: #1f2937;
+  --text-stredny: #6b7280;
+  --pozadie-biela: #ffffff;
+  --pozadie-svetla: #f9fafb;
+  
+  /* Spacing */
+  --medzera-s: 1rem;
+  --medzera-m: 1.5rem;
+  --medzera-l: 2rem;
+  --medzera-xl: 3rem;
+  
+  /* Typography */
+  --font-nadpis: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+
+/* TODO: Základné štýly pre body */
+
+body{
+  color: var(--text-tmavy);
+  background-color: var(--pozadie-biela);
+  font-family: var(--font-body);
+  font-size: var(--medzera-s);
+}
+
+
+ul{
+  list-style: none;  /* Odstránenie guličiek zo všetkých zoznamov */
+}
+
+
+a{
+  text-decoration: none; /* Odstránenie podčiarknutia  z odkazov */
+  color: inherit; /*dedenie farby od rodiča */
+}
+
+
+h1,h2,h3{
+  margin: 0; /* Resetovanie vonkajších okrajov v nadpisoch */
+}
+
+/* TODO: Container trieda (max-width: 1200px) */
+
+
+/* TODO: Header s logom */
+.header{
+  background-color: var(--primarna);
+  color: var(--pozadie-svetla);
+}
+
+/* TODO: Navigácia - mobile: vertikálne, flex */
+
+
+/* TODO: Hero sekcia */
+
+
+/* TODO: Benefits sekcia - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Destinácie - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Footer - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Tlačidlá */
+
+
+/* ==================== TABLET (768px+) ==================== */
+
+@media (min-width: 768px) {
+  /* TODO: Navigácia horizontálne */
+  
+  /* TODO: Benefits Grid 3 stĺpce */
+  
+  /* TODO: Destinácie Grid 2 stĺpce */
+  
+  /* TODO: Footer Grid 2 stĺpce */
+}
+
+
+/* ==================== DESKTOP (1024px+) ==================== */
+
+@media (min-width: 1024px) {
+  /* TODO: Destinácie Grid 3 stĺpce */
+  
+  /* TODO: Väčšie fonty */
+}
+
+h1, h2, h3{
+  margin: 0;
+  font-family: var(--font-nadpis);
+}
+
+.kontajner{
+  padding: var(--medzera-s);
+}
+ 
+.header{
+  background-color: var(--primarna);
+  color: var(--pozadie-svetla);
+  text-align: center;
+}
+ 
+.header__obsah{
+  display: flex;
+  flex-direction: column;
+  gap: var(--medzera-s);
+}
+ 
+.nav__zoznam{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--medzera-s);
+  padding: 0;
+}
+ 
+.nav__polozka{
+  font-weight: 900;
+}
+ 
+.nav__odkaz{
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+ 
+}
+ 
+.nav__odkaz:hover{
+  background-color: var(--primarna-tmava);
+}
+ 
+.hero{
+  background-color: linear-gradiant(135deg, var (--primarna-tmava);
+  color: var(--pozadie-biela);
+  text-align: center;
+  padding: var(--medzera-xl);
+}
+
+.hero__text{
+margin-bottom: var(--medzera-m);
+}
+
+.hero__nadpis{
+margin-bottom: var(--medzera-m);
+}

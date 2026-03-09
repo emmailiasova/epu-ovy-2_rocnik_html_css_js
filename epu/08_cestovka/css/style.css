@@ -4,34 +4,149 @@
    =========================================== */
 
 /* TODO: Importujte Google Fonts - Montserrat a Open Sans */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
 
 /* TODO: CSS Premenné - farby, spacing, fonty */
 :root {
   /* Farby */
+  --primarna: #2563eb;
+  --primarna-tmava: #1e40af;
+  --akcent: #f97316;
+  --text-tmavy: #1f2937;
+  --text-stredny: #6b7280;
+  --pozadie-biela: #ffffff;
+  --pozadie-svetla: #f9fafb;
   
   /* Spacing */
+  --medzera-s: 1rem;
+  --medzera-m: 1.5rem;
+  --medzera-l: 2rem;
+  --medzera-xl: 3rem;
   
   /* Typography */
-  
+  --font-nadpis: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
 }
-ul{
-  list-style: ;
-}
+
 
 /* TODO: Základné štýly pre body */
 
+h1,h2,h3{
+  font-family: var(--font-nadpis);
+}
+
+body{
+  color: var(--text-tmavy);
+  background-color: var(--pozadie-biela);
+  font-family: var(--font-body);
+  font-size: var(--medzera-s);
+}
+
+
+ul{
+  list-style: none;  /* Odstránenie guličiek zo všetkých zoznamov */
+}
+
+
+a{
+  text-decoration: none; /* Odstránenie podčiarknutia  z odkazov */
+  color: inherit; /*dedenie farby od rodiča */
+}
+
+
+h1,h2,h3{
+  margin: 0; /* Resetovanie vonkajších okrajov v nadpisoch */
+}
+
+h3,h3,h3{
+  color: #2563eb;
+}
+
+h2{
+  text-align: center;
+}
 
 /* TODO: Container trieda (max-width: 1200px) */
+.kontajner{
+  padding: var(--medzera-s);
+}
+
 
 
 /* TODO: Header s logom */
+.header{
+  background-color: var(--primarna);
+  color: var(--pozadie-svetla);
+  text-align: center;
+}
 
+.header__obsah{
+  display: flex;
+  flex-direction: column;
+  gap: var(--medzera-s);
+
+}
 
 /* TODO: Navigácia - mobile: vertikálne, flex */
 
+.nav__zoznam{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--medzera-s);
+  padding: 0;
+}
+
+
+.nav__polozka{
+ font-weight: 900;
+}
+
+.nav__odkaz{
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav__odkaz:hover{
+  background-color: var(--primarna-tmava);
+}
+
+
 
 /* TODO: Hero sekcia */
+
+.hero{
+  background: linear-gradient(135deg, var(--primarna),var(--primarna-tmava));
+  color: var(--pozadie-biela);
+  text-align: center;
+  padding: var(--medzera-xl);
+}
+
+.hero__nadpis{
+  margin-bottom: var(--medzera-m);
+}
+
+.hero__text{
+  margin-bottom: var(--medzera-m);
+
+}
+
+.hero__tlacidlo{
+  background-color: var(--akcent);
+  padding: 10px;
+  border-radius: 6.5px;
+
+}
+
+.hero__preco{
+
+  text-align: center;
+
+}
+
+
+
 
 
 /* TODO: Benefits sekcia - Grid (mobile: 1 stĺpec) */
@@ -66,4 +181,3 @@ ul{
   
   /* TODO: Väčšie fonty */
 }
-

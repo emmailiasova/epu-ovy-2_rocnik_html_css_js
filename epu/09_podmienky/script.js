@@ -1,4 +1,4 @@
-Obsah obdlznika je:``
+Obsah obdlznika je:
 Obvod obdlznika je:
 
 let stranaA = 9;

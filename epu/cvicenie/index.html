@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktný formulár</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Kontaktný formulár</h1>
+        <p class="podnadpis">Vyplň formulár a odošli správu</p>
+        
+        <!-- FORMULÁR S GRID LAYOUTOM -->
+        <form class="formular">
+            <div class="input-box">
+                <label for="meno">Meno a priezvisko:</label>
+                <input type="text" id="meno" placeholder="Napr. Ján Novák">
+            </div>
+            
+            <div class="input-box">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" placeholder="Napr. jan@email.sk">
+            </div>
+            
+            <div class="input-box">
+                <label for="vek">Vek:</label>
+                <input type="number" id="vek" placeholder="Napr. 16">
+            </div>
+            
+            <div class="input-box full-width">
+                <label for="sprava">Tvoja správa:</label>
+                <textarea id="sprava" rows="4" placeholder="Napíš svoju správu..."></textarea>
+            </div>
+            
+            <div class="checkbox-box full-width">
+                <label>
+                    <input type="checkbox" id="suhlas">
+                    <span>Súhlasím so spracovaním osobných údajov</span>
+                </label>
+            </div>
+            
+            <button type="button" id="odosli" class="full-width">Odoslať</button>
+        </form>
+        
+        <!-- ÚSPECH (SKRYTÝ NA ZAČIATKU) -->
+        <div class="uspech" id="uspech">
+            <h2>✅ Správa odoslaná!</h2>
+            <p>Ďakujeme, <span id="meno-vysl"></span>!</p>
+            <p>Odpovieme na e-mail: <span id="email-vysl"></span></p>
+        </div>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

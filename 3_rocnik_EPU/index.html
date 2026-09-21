@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelLab – školský mini e-shop</title>
+    <link rel="stylesheet" href="css3/style.css">
+</head>
+<body>
+<header>
+    <div class="obal hlavicka">
+      <a class="logo" href="#domov">✦ PixelLab</a>
+      <nav aria-label="Hlavná navigácia">
+        <a href="#domov">Domov</a>
+        <a href="#produkty">Produkty</a>
+        <a href="#o-nas">O nás</a>
+      </nav>
+      <div>
+        <button id="tema" class="vedlajsie-tlacidlo" type="button" aria-pressed="false">🌙 Tmavý režim</button>
+        <span id="kosik" role="status" aria-live="polite">🛒 Košík: 0</span>
+      </div>
+    </div>
+  </header>
+<main id="domov" class="obal">
+    <section class="uvod" aria-labelledby="nadpis-uvod">
+      <span class="stitok">Ukážková stránka na analýzu</span>
+      <h1 id="nadpis-uvod">Nápady pre tvorivých ľudí.</h1>
+      <p>Preskúmajte mini e-shop s pomôckami pre digitálnych tvorcov. Vyskúšajte tlačidlá, navigáciu a zmenu vzhľadu stránky.</p>
+      <a href="#produkty">Prejsť na produkty ↓</a>
+    </section>
+ 
+    <section id="produkty" aria-labelledby="nadpis-produkty">
+      <h2 id="nadpis-produkty">Naše produkty</h2>
+      <div class="produkty">
+        <article class="karta">
+          <div class="obrazok" role="img" aria-label="Grafický tablet">✍️</div>
+          <div class="obsah-karty">
+            <h3>Grafický tablet</h3>
+            <p>Na kreslenie ilustrácií a skíc.</p>
+            <p class="cena">49,90 €</p>
+            <div class="tlacidla">
+              <button type="button" class="hlavne-tlacidlo pridat">Pridať do košíka</button>
+              <button type="button" class="vedlajsie-tlacidlo zobrazit" aria-expanded="false" aria-controls="detail-1">Viac informácií</button>
+            </div>
+            <p class="detail" id="detail-1" hidden>Jednoduchý tablet vhodný na prvé digitálne kresby.</p>
+          </div>
+        </article>
+ 
+        <article class="karta">
+          <div class="obrazok" role="img" aria-label="Slúchadlá">🎧</div>
+          <div class="obsah-karty">
+            <h3>Štúdiové slúchadlá</h3>
+            <p>Na strih videa a úpravu zvuku.</p>
+            <p class="cena">39,90 €</p>
+            <div class="tlacidla">
+              <button type="button" class="hlavne-tlacidlo pridat">Pridať do košíka</button>
+              <button type="button" class="vedlajsie-tlacidlo zobrazit" aria-expanded="false" aria-controls="detail-2">Viac informácií</button>
+            </div>
+            <p class="detail" id="detail-2" hidden>Ľahké slúchadlá na každodennú prácu s multimédiami.</p>
+          </div>
+        </article>
+ 
+        <article class="karta">
+          <div class="obrazok" role="img" aria-label="Fotoaparát">📷</div>
+          <div class="obsah-karty">
+            <h3>Mini fotoaparát</h3>
+            <p>Na tvorbu školských fotoprojektov.</p>
+            <p class="cena">89,90 €</p>
+            <div class="tlacidla">
+              <button type="button" class="hlavne-tlacidlo pridat">Pridať do košíka</button>
+              <button type="button" class="vedlajsie-tlacidlo zobrazit" aria-expanded="false" aria-controls="detail-3">Viac informácií</button>
+            </div>
+            <p class="detail" id="detail-3" hidden>Malý fotoaparát na precvičovanie kompozície a práce so svetlom.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+ 
+    <section id="o-nas" class="o-nas" aria-labelledby="nadpis-onas">
+      <h2 id="nadpis-onas">O nás</h2>
+      <p>PixelLab je fiktívny obchod vytvorený na školské účely. Objednávky sa nikam neposielajú a košík sa po obnovení stránky vynuluje.</p>
+    </section>
+  </main>
+ 
+  <footer><div class="obal">© 2026 PixelLab · Ukážkový projekt na analýzu frontendu</div></footer>
+ 
+<script src="js/script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,76 @@
+:root {
+      --pozadie: #f5f7fc;
+      --povrch: #ffffff;
+      --text: #202943;
+      --sekundarny: #57647c;
+      --farba: #6256d9;
+      --okraj: #e2e6f0;
+      --vyska-hlavicky: 82px;
+    }
+ 
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--vyska-hlavicky) + 16px);
+    }
+    body {
+      margin: 0;
+      padding-top: var(--vyska-hlavicky);
+      background: var(--pozadie);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+    .obal { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      background: var(--povrch);
+      border-bottom: 1px solid var(--okraj);
+      box-shadow: 0 4px 18px #252d4a14;
+    }
+    .hlavicka { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; flex-wrap: wrap; }
+    .logo { color: var(--farba); font-weight: 800; font-size: 1.5rem; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+    nav a:hover, nav a:focus-visible { color: var(--farba); text-decoration: underline; }
+    button { font: inherit; cursor: pointer; border-radius: 10px; padding: 10px 15px; border: 1px solid var(--farba); }
+    button:focus-visible, a:focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+    .hlavne-tlacidlo { background: var(--farba); color: white; }
+    .vedlajsie-tlacidlo { background: var(--povrch); color: var(--farba); }
+    .uvod { padding: 58px 0 48px; }
+    .uvod h1 { font-size: clamp(2rem, 4vw, 3.2rem); margin: 0 0 8px; }
+    .uvod p { max-width: 640px; color: var(--sekundarny); font-size: 1.1rem; }
+    .stitok { color: var(--farba); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h2 { font-size: 1.8rem; margin: 0 0 20px; }
+    .produkty { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .karta { background: var(--povrch); border: 1px solid var(--okraj); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px #252d4a10; }
+    .obrazok { height: 165px; display: grid; place-items: center; font-size: 4rem; background: linear-gradient(135deg, #e6e2ff, #d5f3fa); }
+    .obsah-karty { padding: 20px; }
+    .obsah-karty h3 { margin: 0 0 8px; }
+    .obsah-karty p { color: var(--sekundarny); }
+    .cena { font-size: 1.3rem; font-weight: 800; color: var(--text) !important; }
+    .tlacidla { display: flex; flex-wrap: wrap; gap: 10px; }
+    .detail { margin-top: 12px; padding: 12px; border-left: 3px solid var(--farba); background: var(--pozadie); border-radius: 6px; }
+    .o-nas { margin: 45px 0; padding: 25px; background: var(--povrch); border: 1px solid var(--okraj); border-radius: 16px; }
+    footer { padding: 25px 0; border-top: 1px solid var(--okraj); color: var(--sekundarny); }
+ 
+    @media (max-width: 760px) {
+      .produkty { grid-template-columns: 1fr; }
+      .uvod { padding: 36px 0; }
+    }
+ 
+    body.tmavy-rezim {
+      --pozadie: #151b2d;
+      --povrch: #242c40;
+      --text: #f2f5ff;
+      --sekundarny: #c0c9de;
+      --farba: #b2a9ff;
+      --okraj: #3c465c;
+    }
+    body.tmavy-rezim .hlavne-tlacidlo { color: #151b2d; }
+ 
+ 
